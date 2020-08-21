@@ -13,14 +13,26 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: #B783C3;
-
+  background-color: white;
 }
 
-.page-footer{
-  background-color: #9E65A9;
-}
+
 main {
   flex: 1 0 auto;
 }
+
+#uberMap {
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; 
+}
+
+.nav-wrapper{
+  position: fixed;
+  z-index: 1;
+}
+
     

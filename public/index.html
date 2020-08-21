@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alex's Boiler Plate</title>
+    <title>Uber-ish Mini App</title>
 
     <!-- Compiled and minified CSS -->
     <!-- Materialze-->
@@ -15,18 +15,21 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link href="styles.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="nav-wrapper" style=" background-color: #9E65A9;">
+            <div class="nav-wrapper" style=" background-color: #1e1d1f;">
                 <a href="#" class="brand-logo" style="height: 100%;">
-                    <img src="assets/ale.jpg" alt="" class="circle responsive-img" style="height: 100%;padding-top: 5px; padding-left: 15px;"> <!-- notice the "circle" class -->
-    
+                    <div class="circle responsive-logo" style="height: 100%;padding-top: 5px; padding-left: 15px;"> Uber-ish Mini App</div>
                 </a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="https://www.linkedin.com/in/alessiobonti">Linkedin</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Account</a></li>
                 </ul>
             </div>
         </nav>
@@ -34,34 +37,29 @@
     <main>
 
         <div class="container">
-            <h1 class="title">Alex NExUs</h1>
+            <div id="uberMap"></div>
             <div class="row">
-                <p class="flow-text mainText">This is a basic boilerplate i have created based on Node Express and Materialize, I hope it will help you develop your next project!</p>
-            </div>
-            <div class="row center" style="height: 150px;">
-                <img src="assets/ale2.jpg" alt="" class="circle responsive-img" style="height: 100%;padding-top: 5px; padding-left: 15px;"> <!-- notice the "circle" class -->
-    
-    
-            </div>
+                <div class="col s12 m6">
+                  <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Order a Taxi</span>
+                      <p>Let's get you a ride</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="#">Pick Up Point</a>
+                      <a href="#">Destination</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             <div class="row center " style="padding-top:50px;">
-                <a id="testButton" class="waves-effect waves-light btn-large " style="background-color: #9E65A9;"><i class="material-icons left" style="color:white font-size: larger;">emoji_people</i>Click me!</a>
-
-    
+                <a id="testButton" class="waves-effect waves-light btn-large " style="background-color: black;">Find Me A Ride</a>
             </div>
-    
-
-          
+             
         </div>
     
     </main>
-    <footer class="page-footer">
-        <div class="footer-copyright">
-          <div class="container">
-          © 2020 Copyright AlexNexus
-          <a class="grey-text text-lighten-4 right" href="https://github.com/alexbonti/node-material"><img src="assets/git-logo.svg" style="height: 20px; padding-right: 15px;"></i>Boiler plate here !</a>
-          </div>
-        </div>
-      </footer>
+    
 
 
 
@@ -76,6 +74,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script src="env.js"></script>
+
+    <!--Leaflet-->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
 
 </body>
 
